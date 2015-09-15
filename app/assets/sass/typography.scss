@@ -4,10 +4,22 @@
 
 */
 
+/*
+
+### Import helpers and the font
+
+- sass-mq
+- frontend/standard/variables
+- Source Sans Pro font
+
+*/
+
+
 @import '../../../vendor/sass-mq/mq';
 @import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
 @import '../../../vendor/frontend/app/assets/sass/variables/_standard.scss';
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,600,300italic,400italic,600italic,700,700italic,900,900italic);
+
 /*
 
 ### REM setup and text-size-adjust
@@ -30,6 +42,18 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
+/*
+
+### Content sections
+
+*/
+
+
+/*
+
+#### Body text size
+
+*/
 
 #body {
     font-size: $body-font-size;
@@ -40,77 +64,14 @@ html {
     font-weight: 400;
 }
 
-//#content{
-//  ul, ol{
-//    float: left;
-//  }
-//}
-// Headings
-h1,
-h2,
-h3 {
-    font-family: $h-font-family;
-}
+/*
 
-// Lists
-ul,
-ol {
-    //margin-left: 2rem;
-}
+#### Headings
 
-ul {
-    list-style: disc;
-}
+Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
 
-ol {
-    list-style: decimal;
-}
+*/
 
-dt,
-dd {
-    display: inline-block;
-    float: left;
-}
-
-dt {
-    clear: left;
-    margin-right: .5rem;
-    font-weight: bold;
-    &:after {
-        content: ": ";
-    }
-}
-
-a {
-    -webkit-transition: .1s color;
-    -moz-transition: .1s color;
-    -ms-transition: .1s color;
-    -o-transition: .1s color;
-    transition: .1s color;
-    color: $link-color;
-    text-decoration: none;
-    &:hover,
-    &:active,
-    &:focus {
-        color: $link-hover-color;
-        text-decoration: none;
-    }
-}
-
-// Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
-p {
-    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
-    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    margin-bottom: 2rem;
-    &.intro {
-        font-size: 130%;
-    }
-}
-
-// Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
 h1,
 h2,
 h3,
@@ -126,56 +87,85 @@ h6 {
     //font-family: $sans-serif;
     font-style: normal;
     font-weight: 700;
+    font-family: $h-font-family;
 }
+/*
 
-// Heading level 1.
-h1,
-.alpha {
+##### Heading level 1.
+
+*/
+h1{
     //padding-top: 1rem;
     line-height: 3rem;
     //.fontsize-0(28);
     font-size: 2.8rem;
 }
 
-// Heading level 2.
-h2,
-.beta {
+/*
+
+##### Heading level 2.
+
+*/
+h2{
     //padding-top: 1rem;
     //.fontsize-0(22);
     font-size: 2.2rem;
 }
 
-// Heading level 3.
-h3,
-.gamma {
+/*
+
+##### Heading level 3.
+
+*/
+h3{
     //padding-top: 1rem;
     //.fontsize-0(20);
     font-size: 1.8rem;
 }
 
-// Heading level 4.
-h4,
-.delta {
+/*
+
+##### Heading level 4.
+
+*/
+h4{
     //padding-top: 1rem;
     //.fontsize-0(18);
     font-size: 1.6rem;
 }
 
-// Heading level 5.
-h5,
-.epsilon {
+/*
+
+##### Heading level 5.
+
+*/
+
+h5{
     //padding-top: 1rem;
     //.fontsize-0(17);
     font-size: 1.6rem;
 }
+/*
 
-// Heading level 6.
+##### Heading level 6.
+
+*/
 h6,
 .zeta {
     //padding-top: 1rem;
 }
 
-// Nice spacing after high level headings and images. Text sits directly below h4, h5 and h6.
+
+/*
+
+##### Heading combined with other content
+
+Nice spacing after high level headings and images. Text sits directly below h4, h5 and h6.
+
+*/
+
+
+//
 h1 + p,
 h1 + ol,
 h1 + ul,
@@ -207,18 +197,41 @@ img + pre,
     margin-top: 2rem;
 }
 
-form {
-    margin-bottom: 2rem;
-    &.form-inline {
-        margin-bottom: 0;
+
+
+
+/*
+
+#### Lists
+
+*/
+ul,
+ol {
+    //margin-left: 2rem;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+dt,
+dd {
+    display: inline-block;
+    float: left;
+}
+
+dt {
+    clear: left;
+    margin-right: .5rem;
+    font-weight: bold;
+    &:after {
+        content: ": ";
     }
 }
-
-// Remove padding-top from first heading
-section > .container >:first-child {
-    padding-top: 0;
-}
-
 // Lists.
 ul,
 ol {
@@ -245,48 +258,84 @@ ol {
     }
 }
 
-// Bold.
-b,
-strong,
-.bold {
-    font-weight: 600;
-}
 
-// Italic.
-em,
-i,
-.italic {
-    font-style: italic;
-}
 
-// Caption or inline small text.
-small,
-.caption {
-    font-family: $body-font-family;
-    //.fontsize-0(12);
-    font-size: 1.2rem;
-}
 
-// Abbrevation
-abbr {
-    border-bottom: 1px dotted black;
-    &:hover {
-        cursor: help;
+
+/*
+
+#### A-links
+
+*/
+
+a {
+    -webkit-transition: .1s color;
+    -moz-transition: .1s color;
+    -ms-transition: .1s color;
+    -o-transition: .1s color;
+    transition: .1s color;
+    color: $link-color;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: none;
     }
 }
 
-// Nice spacing for captions.
-h1 + .caption,
-.alpha + .caption,
-h2 + .caption,
-.beta + .caption,
-h3 + .caption,
-.gamma + .caption,
-img + .caption {
-    margin-top: 0;
+/*
+
+#### Paragraphs
+
+Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
+
+*/
+
+p {
+    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
+    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    margin-bottom: 2rem;
+    &.intro {
+        font-size: 130%;
+    }
 }
 
-// Quotes.
+
+
+/*
+
+#### Forms
+
+
+*/
+
+
+form {
+    margin-bottom: 2rem;
+    &.form-inline {
+        margin-bottom: 0;
+    }
+}
+
+// Remove padding-top from first heading
+section > .container >:first-child {
+    padding-top: 0;
+}
+
+
+
+
+/*
+
+#### Quotes
+
+*/
+
+
 blockquote {
     p {
         font-style: italic;
@@ -307,7 +356,13 @@ blockquote {
     }
 }
 
-// Horizontal rule.
+
+
+/*
+
+#### Horizontal rule.
+
+*/
 hr {
     color: darken($backgroundColour, 20%);
     background-color: darken($backgroundColour, 20%);
@@ -317,7 +372,13 @@ hr {
     margin-bottom: 3rem;
 }
 
-// Code block. Some styles from normalize included.
+/*
+
+#### Code block. Some styles from normalize included.
+
+ Some styles from normalize included.
+
+*/
 code,
 pre {
     background-color: $codeBackgroundColour;
@@ -341,24 +402,126 @@ pre code {
     font-size: 1.4rem;
 }
 
-// Letter space those capitals people, Jan Tschichold would be proud.
+
+
+
+
+
+/*
+
+#### Helpers
+
+
+*/
+
+/*
+
+##### Bold
+
+*/
+b,
+strong,
+.bold {
+    font-weight: 600;
+}
+
+/*
+
+##### Italic.
+
+*/
+em,
+i,
+.italic {
+    font-style: italic;
+}
+
+/*
+
+##### Caption or inline small text.
+
+*/
+small,
+.caption {
+    font-family: $body-font-family;
+    //.fontsize-0(12);
+    font-size: 1.2rem;
+}
+
+/*
+
+##### Abbrevation
+
+*/
+abbr {
+    border-bottom: 1px dotted black;
+    &:hover {
+        cursor: help;
+    }
+}
+
+/*
+
+##### Nice spacing for captions.
+
+*/
+h1 + .caption,
+.alpha + .caption,
+h2 + .caption,
+.beta + .caption,
+h3 + .caption,
+.gamma + .caption,
+img + .caption {
+    margin-top: 0;
+}
+
+
+
+/*
+
+##### Letter space those capitals people, Jan Tschichold would be proud.
+
+*/
 .upper {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
 
-// Special styling for inline-editing notes from the admission office
+/*
+
+##### Special styling for inline-editing notes from the admission office
+
+*/
 .admissionUpdateTime {
     font-size: 14px;
     font-size: 1.4rem;
     font-style: italic;
 }
 
+
+/*
+
+### MQ tweaks at sertain breakpoints
+
+*/
+
+/*
+
+#### Small screens
+
+*/
+
 @include mq($until: small) {
     #content {
         font-size: 80%;
     }
 }
+
+/*
+
+#### Medium screens
+
+*/
 
 @include mq($from: small, $until: large) {
     #content {
@@ -372,11 +535,21 @@ pre code {
         }
     }
 }
+/*
 
+#### Large screens
+
+*/
 @include mq($from: large) {}
 
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dppx) {
+
+/*
+
+#### HR screens
+
+*/
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {
     #content {
         font-weight: 300;
     }
