@@ -1,0 +1,383 @@
+/*
+
+## Component: Typography
+
+*/
+
+@import '../../../vendor/sass-mq/mq';
+@import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '../../../vendor/frontend/app/assets/sass/variables/_standard.scss';
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,600,300italic,400italic,600italic,700,700italic,900,900italic);
+/*
+
+### REM setup and text-size-adjust
+
+Set 1rem to be 10px as a size-base.
+
+```
+html {
+    font-size: 62.5%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+```
+
+
+*/
+
+html {
+    font-size: 62.5%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+#body {
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    font-family: $body-font-family;
+    //padding-top: 88px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+//#content{
+//  ul, ol{
+//    float: left;
+//  }
+//}
+// Headings
+h1,
+h2,
+h3 {
+    font-family: $h-font-family;
+}
+
+// Lists
+ul,
+ol {
+    //margin-left: 2rem;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+dt,
+dd {
+    display: inline-block;
+    float: left;
+}
+
+dt {
+    clear: left;
+    margin-right: .5rem;
+    font-weight: bold;
+    &:after {
+        content: ": ";
+    }
+}
+
+a {
+    -webkit-transition: .1s color;
+    -moz-transition: .1s color;
+    -ms-transition: .1s color;
+    -o-transition: .1s color;
+    transition: .1s color;
+    color: $link-color;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: none;
+    }
+}
+
+// Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
+p {
+    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
+    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    margin-bottom: 2rem;
+    &.intro {
+        font-size: 130%;
+    }
+}
+
+// Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
+    -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    //color: $headingColour;
+    //font-family: $sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+// Heading level 1.
+h1,
+.alpha {
+    //padding-top: 1rem;
+    line-height: 3rem;
+    //.fontsize-0(28);
+    font-size: 2.8rem;
+}
+
+// Heading level 2.
+h2,
+.beta {
+    //padding-top: 1rem;
+    //.fontsize-0(22);
+    font-size: 2.2rem;
+}
+
+// Heading level 3.
+h3,
+.gamma {
+    //padding-top: 1rem;
+    //.fontsize-0(20);
+    font-size: 1.8rem;
+}
+
+// Heading level 4.
+h4,
+.delta {
+    //padding-top: 1rem;
+    //.fontsize-0(18);
+    font-size: 1.6rem;
+}
+
+// Heading level 5.
+h5,
+.epsilon {
+    //padding-top: 1rem;
+    //.fontsize-0(17);
+    font-size: 1.6rem;
+}
+
+// Heading level 6.
+h6,
+.zeta {
+    //padding-top: 1rem;
+}
+
+// Nice spacing after high level headings and images. Text sits directly below h4, h5 and h6.
+h1 + p,
+h1 + ol,
+h1 + ul,
+h1 + dl,
+h1 + blockquote p,
+h1 + pre,
+.alpha + p,
+.alpha + ol,
+.alpha + ul,
+.alpha + blockquote p,
+.alpha + pre,
+h2 + p,
+h2 + ol,
+h2 + ul,
+h2 + dl,
+h2 + blockquote p,
+h2 + pre,
+.beta + p,
+.beta + ol,
+.beta + ul,
+.beta + blockquote p,
+.beta + pre,
+img + p,
+img + ol,
+img + ul,
+img + blockquote p,
+img + pre,
+#sidebar header + * {
+    margin-top: 2rem;
+}
+
+form {
+    margin-bottom: 2rem;
+    &.form-inline {
+        margin-bottom: 0;
+    }
+}
+
+// Remove padding-top from first heading
+section > .container >:first-child {
+    padding-top: 0;
+}
+
+// Lists.
+ul,
+ol {
+    margin-bottom: 2rem;
+    li {
+        -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
+        -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        margin-left: 2.4rem;
+        //a {
+        //  //color: $hoverColour;
+        //  &:hover, &:active, &:focus {
+        //    color: $linkColour;
+        //  }
+        //}
+    }
+}
+
+.dropdown-menu {
+    li {
+        margin-left: 0;
+    }
+}
+
+// Bold.
+b,
+strong,
+.bold {
+    font-weight: 600;
+}
+
+// Italic.
+em,
+i,
+.italic {
+    font-style: italic;
+}
+
+// Caption or inline small text.
+small,
+.caption {
+    font-family: $body-font-family;
+    //.fontsize-0(12);
+    font-size: 1.2rem;
+}
+
+// Abbrevation
+abbr {
+    border-bottom: 1px dotted black;
+    &:hover {
+        cursor: help;
+    }
+}
+
+// Nice spacing for captions.
+h1 + .caption,
+.alpha + .caption,
+h2 + .caption,
+.beta + .caption,
+h3 + .caption,
+.gamma + .caption,
+img + .caption {
+    margin-top: 0;
+}
+
+// Quotes.
+blockquote {
+    p {
+        font-style: italic;
+        padding-left: 2rem;
+        border-left: 0.5rem solid;
+    }
+    footer {
+        display: inline-block;
+        margin-left: 1rem;
+        p {
+            border: none;
+            &:before {
+                content: "-";
+                margin-right: 1rem;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+// Horizontal rule.
+hr {
+    color: darken($backgroundColour, 20%);
+    background-color: darken($backgroundColour, 20%);
+    border: 0;
+    border-bottom: 1px solid darken($backgroundColour, 20%);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+// Code block. Some styles from normalize included.
+code,
+pre {
+    background-color: $codeBackgroundColour;
+    color: $white;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+pre {
+    border-radius: 0.5rem;
+    display: block;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+pre code {
+    //.fontsize-0(14);
+    font-size: 1.4rem;
+}
+
+// Letter space those capitals people, Jan Tschichold would be proud.
+.upper {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+// Special styling for inline-editing notes from the admission office
+.admissionUpdateTime {
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+@include mq($until: small) {
+    #content {
+        font-size: 80%;
+    }
+}
+
+@include mq($from: small, $until: large) {
+    #content {
+        font-size: 80%;
+        p,
+        ul,
+        ol {
+            //font-size: 120%;
+            max-width: 60rem;
+            line-height: 1.5em;
+        }
+    }
+}
+
+@include mq($from: large) {}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dppx) {
+    #content {
+        font-weight: 300;
+    }
+}
