@@ -1,8 +1,8 @@
-# layout plugin
+# Typography plugin
 
 ## About
 
-A plugin-component for the layout stylesheet.
+A plugin-component for the typography.
 
 ## Copyright
 
@@ -13,7 +13,7 @@ This project is distributed under a GNU General Public License v3 - Take a look 
 Install [Git](http://git-scm.com) if it's not already installed on your computer. Then run (this will download this project to the folder the shell has open):
 
 ```
-$ git clone https://github.com/hiof/layout.git
+$ git clone https://github.com/hiof/typography.git
 ```
 
 Install [io.js](https://iojs.org) (or [Node.js](http://nodejs.org)) if it's not already installed on your computer. Then run (this will install the project dependencies):
@@ -26,7 +26,7 @@ $ bower install
 
 ## Build
 
-`$ grunt build`: Compiles and builds the layout plugin
+`$ grunt build`: Compiles and builds the typography plugin
 
 ## Deploy
 
@@ -44,12 +44,11 @@ $ bower install
 
 ## Releases
 
-[x] - v1.0.1 - Initial layout
 
-[Github releases](https://github.com/hiof/layout/releases)
+[Github releases](https://github.com/hiof/typography/releases)
 
 
 
 ### Roadmap
 
-[ ] - Make the layout project agnostic
+[ ] - Make the typography project agnostic
