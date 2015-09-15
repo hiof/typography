@@ -1,0 +1,418 @@
+/*
+
+## Component: Typography
+
+*/
+/*
+
+### Import helpers and the font
+
+- sass-mq
+- frontend/standard/variables
+- Source Sans Pro font
+
+*/
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,600,300italic,400italic,600italic,700,700italic,900,900italic);
+/*
+
+### REM setup and text-size-adjust
+
+Set 1rem to be 10px as a size-base.
+
+```
+html {
+    font-size: 62.5%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+```
+
+
+*/
+html {
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/*
+
+### Content sections
+
+*/
+/*
+
+#### Body text size
+
+*/
+#body {
+  font-size: 1.8rem;
+  line-height: 1.8em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400; }
+
+/*
+
+#### Headings
+
+Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
+
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Source Sans Pro", sans-serif; }
+
+/*
+
+##### Heading level 1.
+
+*/
+h1 {
+  line-height: 3rem;
+  font-size: 2.8rem; }
+
+/*
+
+##### Heading level 2.
+
+*/
+h2 {
+  font-size: 2.2rem; }
+
+/*
+
+##### Heading level 3.
+
+*/
+h3 {
+  font-size: 1.8rem; }
+
+/*
+
+##### Heading level 4.
+
+*/
+h4 {
+  font-size: 1.6rem; }
+
+/*
+
+##### Heading level 5.
+
+*/
+h5 {
+  font-size: 1.6rem; }
+
+/*
+
+##### Heading level 6.
+
+*/
+/*
+
+##### Heading combined with other content
+
+Nice spacing after high level headings and images. Text sits directly below h4, h5 and h6.
+
+*/
+h1 + p,
+h1 + ol,
+h1 + ul,
+h1 + dl,
+h1 + blockquote p,
+h1 + pre,
+.alpha + p,
+.alpha + ol,
+.alpha + ul,
+.alpha + blockquote p,
+.alpha + pre,
+h2 + p,
+h2 + ol,
+h2 + ul,
+h2 + dl,
+h2 + blockquote p,
+h2 + pre,
+.beta + p,
+.beta + ol,
+.beta + ul,
+.beta + blockquote p,
+.beta + pre,
+img + p,
+img + ol,
+img + ul,
+img + blockquote p,
+img + pre,
+#sidebar header + * {
+  margin-top: 2rem; }
+
+/*
+
+#### Lists
+
+*/
+ul {
+  list-style: disc; }
+
+ol {
+  list-style: decimal; }
+
+dt,
+dd {
+  display: inline-block;
+  float: left; }
+
+dt {
+  clear: left;
+  margin-right: .5rem;
+  font-weight: bold; }
+  dt:after {
+    content: ": "; }
+
+ul,
+ol {
+  margin-bottom: 2rem; }
+  ul li,
+  ol li {
+    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    margin-left: 2.4rem; }
+
+.dropdown-menu li {
+  margin-left: 0; }
+
+/*
+
+#### A-links
+
+*/
+a {
+  transition: .1s color;
+  color: #337ab7;
+  text-decoration: none; }
+  a:hover,
+  a:active,
+  a:focus {
+    color: #23527c;
+    text-decoration: none; }
+
+/*
+
+#### Paragraphs
+
+Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
+
+*/
+p {
+  -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  margin-bottom: 2rem; }
+  p.intro {
+    font-size: 130%; }
+
+/*
+
+#### Forms
+
+
+*/
+form {
+  margin-bottom: 2rem; }
+  form.form-inline {
+    margin-bottom: 0; }
+
+section > .container > :first-child {
+  padding-top: 0; }
+
+/*
+
+#### Quotes
+
+*/
+blockquote p {
+  font-style: italic;
+  padding-left: 2rem;
+  border-left: 0.5rem solid; }
+
+blockquote footer {
+  display: inline-block;
+  margin-left: 1rem; }
+  blockquote footer p {
+    border: none; }
+    blockquote footer p:before {
+      content: "-";
+      margin-right: 1rem;
+      display: inline-block; }
+
+/*
+
+#### Horizontal rule.
+
+*/
+hr {
+  color: #c9c9c9;
+  background-color: #c9c9c9;
+  border: 0;
+  border-bottom: 1px solid #c9c9c9;
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+/*
+
+#### Code block. Some styles from normalize included.
+
+ Some styles from normalize included.
+
+*/
+code,
+pre {
+  background-color: #002028;
+  color: #fff;
+  font-family: Menlo, Monaco, "Courier New", monospace; }
+
+pre {
+  border-radius: 0.5rem;
+  display: block;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  margin-bottom: 2rem;
+  padding: 1rem; }
+
+pre code {
+  font-size: 1.4rem; }
+
+/*
+
+#### Helpers
+
+
+*/
+/*
+
+##### Bold
+
+*/
+b,
+strong,
+.bold {
+  font-weight: 600; }
+
+/*
+
+##### Italic.
+
+*/
+em,
+i,
+.italic {
+  font-style: italic; }
+
+/*
+
+##### Caption or inline small text.
+
+*/
+small,
+.caption {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2rem; }
+
+/*
+
+##### Abbrevation
+
+*/
+abbr {
+  border-bottom: 1px dotted black; }
+  abbr:hover {
+    cursor: help; }
+
+/*
+
+##### Nice spacing for captions.
+
+*/
+h1 + .caption,
+.alpha + .caption,
+h2 + .caption,
+.beta + .caption,
+h3 + .caption,
+.gamma + .caption,
+img + .caption {
+  margin-top: 0; }
+
+/*
+
+##### Letter space those capitals people, Jan Tschichold would be proud.
+
+*/
+.upper {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem; }
+
+/*
+
+##### Special styling for inline-editing notes from the admission office
+
+*/
+.admissionUpdateTime {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-style: italic; }
+
+/*
+
+### MQ tweaks at sertain breakpoints
+
+*/
+/*
+
+#### Small screens
+
+*/
+@media (max-width: 39.99em) {
+  #content {
+    font-size: 80%; } }
+
+/*
+
+#### Medium screens
+
+*/
+@media (min-width: 40em) and (max-width: 56.24em) {
+  #content {
+    font-size: 80%; }
+    #content p,
+    #content ul,
+    #content ol {
+      max-width: 60rem;
+      line-height: 1.5em; } }
+
+/*
+
+#### Large screens
+
+*/
+/*
+
+#### HR screens
+
+*/
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {
+  #content {
+    font-weight: 300; } }
