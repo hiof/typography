@@ -44,6 +44,8 @@ html {
 #### Body text size
 
 */
+body,
+.body,
 #body {
   font-size: 1.8rem;
   line-height: 1.8em;
