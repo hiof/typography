@@ -36,6 +36,14 @@ html {
 
 /*
 
+### Focus
+
+*/
+:focus {
+  outline: 1px solid #ffff00; }
+
+/*
+
 ### Content sections
 
 */
