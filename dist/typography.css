@@ -40,7 +40,8 @@ html {
 
 */
 :focus {
-  outline: 1px solid #ffff00; }
+  outline: 1px solid #337ab7;
+  outline: 0.1rem solid #337ab7; }
 
 /*
 
