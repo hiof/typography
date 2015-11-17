@@ -316,7 +316,7 @@ Dotted underline on links within the content section
 
 #content,
 .content {
-    a {
+    a:not(.btn) {
         border-bottom: 1px dotted $link-color;
         &:hover,
         &:active,
