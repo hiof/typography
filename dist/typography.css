@@ -288,6 +288,16 @@ blockquote {
     height: 0;
     bottom: 0;
     right: 1.5rem; }
+  blockquote.cover-quote {
+    border-left: 0px;
+    background: transparent; }
+    blockquote.cover-quote cite {
+      border-left: 0px;
+      background: transparent; }
+      blockquote.cover-quote cite:before, blockquote.cover-quote cite:after {
+        display: none; }
+    blockquote.cover-quote:before, blockquote.cover-quote:after {
+      display: none; }
 
 cite {
   font-style: italic;

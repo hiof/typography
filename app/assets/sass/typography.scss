@@ -382,7 +382,6 @@ blockquote {
   padding-right: 4rem;
   padding-top: 1rem;
   border-left: 4px solid #ccc;
-  //border-left: 0.5rem solid #333;
   &:before, &:after{
     font-size: 8rem;
     display: block;
@@ -405,18 +404,21 @@ blockquote {
     bottom:0;
     right: 1.5rem;
   }
-  //footer {
-  //    display: inline-block;
-  //    margin-left: 1rem;
-  //    p {
-  //        border: none;
-  //        &:before {
-  //            content: "-";
-  //            margin-right: 1rem;
-  //            display: inline-block;
-  //        }
-  //    }
-  //}
+  //overrides for .cover-quotes
+  &.cover-quote{
+    border-left: 0px;
+    background: transparent ;
+    cite{
+        border-left: 0px ;
+        background: transparent ;
+        &:before, &:after{
+          display: none;
+        }
+    }
+    &:before, &:after{
+      display: none;
+    }
+  }
 }
 cite{
   font-style: italic;
