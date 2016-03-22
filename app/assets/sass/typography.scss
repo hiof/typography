@@ -376,30 +376,33 @@ section > .container >:first-child {
 
 blockquote {
   position: relative;
-  font-style: italic;
+  //font-style: italic;
+  background: #f9f9f9;
   padding-left: 4rem;
+  padding-right: 4rem;
+  border-left: 4px solid #ccc;
   //border-left: 0.5rem solid #333;
   &:before, &:after{
     font-size: 8rem;
     display: block;
     //font-family: helvetica;
     position: absolute;
-    color: rgba(0, 0, 0, 0.2);
+    color: #ccc;
   }
   &:before {
     content:"\201C";
     height:0;
     margin-left:3rem;
     top:0;
-    left:0;
+    left:.5rem;
   }
   &:after {
     content:"\201D";
     height:5rem;
-    margin-top:7rem;
-    margin-left:36rem;
-    bottom:0;
-    right:0;
+    //margin-top:7rem;
+    //margin-left:36rem;
+    //bottom:0;
+    right: .5rem;
   }
   //footer {
   //    display: inline-block;
@@ -415,8 +418,12 @@ blockquote {
   //}
 }
 cite{
-  display: inline-block;
+  font-style: italic;
   padding-left: 4rem;
+  background: #f9f9f9;
+  display: block;
+  border-left: 4px solid #ccc;
+  padding-top: 1rem;
   //position: relative;
   &:before {
     content: "\2013";
