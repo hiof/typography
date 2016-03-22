@@ -265,20 +265,51 @@ section > .container > :first-child {
 #### Quotes
 
 */
-blockquote p {
-  font-style: italic;
-  padding-left: 2rem;
-  border-left: 0.5rem solid; }
+blockquote {
+  position: relative;
+  background: #f9f9f9;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
+  border-left: 4px solid #ccc; }
+  blockquote:before, blockquote:after {
+    font-size: 8rem;
+    display: block;
+    position: absolute;
+    color: #ccc; }
+  blockquote:before {
+    content: "\201C";
+    height: 0;
+    margin-left: 3rem;
+    top: 3rem;
+    left: -2.5rem; }
+  blockquote:after {
+    content: "\201D";
+    height: 0;
+    bottom: 0;
+    right: 1.5rem; }
+  blockquote.cover-quote {
+    border-left: 0px;
+    background: transparent; }
+    blockquote.cover-quote cite {
+      border-left: 0px;
+      background: transparent; }
+      blockquote.cover-quote cite:before, blockquote.cover-quote cite:after {
+        display: none; }
+    blockquote.cover-quote:before, blockquote.cover-quote:after {
+      display: none; }
 
-blockquote footer {
-  display: inline-block;
-  margin-left: 1rem; }
-  blockquote footer p {
-    border: none; }
-    blockquote footer p:before {
-      content: "-";
-      margin-right: 1rem;
-      display: inline-block; }
+cite {
+  font-style: italic;
+  padding-left: 4rem;
+  background: #f9f9f9;
+  display: block;
+  border-left: 4px solid #ccc;
+  padding-top: 1rem; }
+  cite:before {
+    content: "\2013";
+    margin-right: 1rem;
+    display: inline-block; }
 
 /*
 
