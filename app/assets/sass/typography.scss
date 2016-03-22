@@ -4,6 +4,7 @@
 
 */
 
+
 /*
 
 ### Import helpers and the font
@@ -13,7 +14,6 @@
 - Source Sans Pro font
 
 */
-
 
 @import '../../../vendor/sass-mq/mq';
 @import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
@@ -42,6 +42,17 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
+
+/*
+
+### Focus
+
+*/
+:focus{
+    outline: 3px solid $link-color;
+    outline: .3rem solid $link-color;
+}
+
 /*
 
 ### Content sections
@@ -65,6 +76,7 @@ body,
     font-style: normal;
     font-weight: 400;
 }
+
 
 /*
 
@@ -91,50 +103,60 @@ h6 {
     font-weight: 700;
     font-family: $h-font-family;
 }
+
+
 /*
 
 ##### Heading level 1.
 
 */
-h1{
+
+h1 {
     //padding-top: 1rem;
     line-height: 3rem;
     //.fontsize-0(28);
     font-size: 2.8rem;
 }
 
+
 /*
 
 ##### Heading level 2.
 
 */
-h2{
+
+h2 {
     //padding-top: 1rem;
     //.fontsize-0(22);
     font-size: 2.2rem;
 }
+
 
 /*
 
 ##### Heading level 3.
 
 */
-h3{
+
+h3 {
     //padding-top: 1rem;
     //.fontsize-0(20);
     font-size: 1.8rem;
 }
+
 
 /*
 
 ##### Heading level 4.
 
 */
-h4{
+
+h4 {
     //padding-top: 1rem;
     //.fontsize-0(18);
     font-size: 1.6rem;
 }
+
 
 /*
 
@@ -142,16 +164,19 @@ h4{
 
 */
 
-h5{
+h5 {
     //padding-top: 1rem;
     //.fontsize-0(17);
     font-size: 1.6rem;
 }
+
+
 /*
 
 ##### Heading level 6.
 
 */
+
 h6,
 .zeta {
     //padding-top: 1rem;
@@ -165,7 +190,6 @@ h6,
 Nice spacing after high level headings and images. Text sits directly below h4, h5 and h6.
 
 */
-
 
 //
 h1 + p,
@@ -200,13 +224,12 @@ img + pre,
 }
 
 
-
-
 /*
 
 #### Lists
 
 */
+
 ul,
 ol {
     //margin-left: 2rem;
@@ -234,6 +257,7 @@ dt {
         content: ": ";
     }
 }
+
 // Lists.
 ul,
 ol {
@@ -261,9 +285,6 @@ ol {
 }
 
 
-
-
-
 /*
 
 #### A-links
@@ -286,6 +307,26 @@ a {
     }
 }
 
+
+/*
+
+Dotted underline on links within the content section
+
+*/
+
+#content,
+.content {
+    a:not(.btn) {
+        border-bottom: 1px dotted $link-color;
+        &:hover,
+        &:active,
+        &:focus {
+            border-bottom: 2px solid $link-color;
+        }
+    }
+}
+
+
 /*
 
 #### Paragraphs
@@ -307,14 +348,12 @@ p {
 }
 
 
-
 /*
 
 #### Forms
 
 
 */
-
 
 form {
     margin-bottom: 2rem;
@@ -329,14 +368,11 @@ section > .container >:first-child {
 }
 
 
-
-
 /*
 
 #### Quotes
 
 */
-
 
 blockquote {
     p {
@@ -359,12 +395,12 @@ blockquote {
 }
 
 
-
 /*
 
 #### Horizontal rule.
 
 */
+
 hr {
     color: darken($backgroundColour, 20%);
     background-color: darken($backgroundColour, 20%);
@@ -374,6 +410,7 @@ hr {
     margin-bottom: 3rem;
 }
 
+
 /*
 
 #### Code block. Some styles from normalize included.
@@ -381,6 +418,7 @@ hr {
  Some styles from normalize included.
 
 */
+
 code,
 pre {
     background-color: $codeBackgroundColour;
@@ -405,10 +443,6 @@ pre code {
 }
 
 
-
-
-
-
 /*
 
 #### Helpers
@@ -416,33 +450,39 @@ pre code {
 
 */
 
+
 /*
 
 ##### Bold
 
 */
+
 b,
 strong,
 .bold {
     font-weight: 600;
 }
 
+
 /*
 
 ##### Italic.
 
 */
+
 em,
 i,
 .italic {
     font-style: italic;
 }
 
+
 /*
 
 ##### Caption or inline small text.
 
 */
+
 small,
 .caption {
     font-family: $body-font-family;
@@ -450,11 +490,13 @@ small,
     font-size: 1.2rem;
 }
 
+
 /*
 
 ##### Abbrevation
 
 */
+
 abbr {
     border-bottom: 1px dotted black;
     &:hover {
@@ -462,11 +504,13 @@ abbr {
     }
 }
 
+
 /*
 
 ##### Nice spacing for captions.
 
 */
+
 h1 + .caption,
 .alpha + .caption,
 h2 + .caption,
@@ -478,22 +522,24 @@ img + .caption {
 }
 
 
-
 /*
 
 ##### Letter space those capitals people, Jan Tschichold would be proud.
 
 */
+
 .upper {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
+
 
 /*
 
 ##### Special styling for inline-editing notes from the admission office
 
 */
+
 .admissionUpdateTime {
     font-size: 14px;
     font-size: 1.4rem;
@@ -507,6 +553,7 @@ img + .caption {
 
 */
 
+
 /*
 
 #### Small screens
@@ -514,10 +561,11 @@ img + .caption {
 */
 
 @include mq($until: small) {
-    #content {
-        font-size: 80%;
-    }
+    //#content {
+    //   font-size: 80%;
+    //}
 }
+
 
 /*
 
@@ -527,7 +575,7 @@ img + .caption {
 
 @include mq($from: small, $until: large) {
     #content {
-        font-size: 80%;
+        //font-size: 80%;
         p,
         ul,
         ol {
@@ -537,11 +585,14 @@ img + .caption {
         }
     }
 }
+
+
 /*
 
 #### Large screens
 
 */
+
 @include mq($from: large) {}
 
 
@@ -551,8 +602,8 @@ img + .caption {
 
 */
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {
-    #content {
-        font-weight: 300;
-    }
-}
+//@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dppx) {
+//    #content {
+//        font-weight: 300;
+//    }
+//}
