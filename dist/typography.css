@@ -270,6 +270,7 @@ blockquote {
   background: #f9f9f9;
   padding-left: 4rem;
   padding-right: 4rem;
+  padding-top: 1rem;
   border-left: 4px solid #ccc; }
   blockquote:before, blockquote:after {
     font-size: 8rem;
@@ -280,12 +281,13 @@ blockquote {
     content: "\201C";
     height: 0;
     margin-left: 3rem;
-    top: 0;
-    left: .5rem; }
+    top: 3rem;
+    left: -2.5rem; }
   blockquote:after {
     content: "\201D";
-    height: 5rem;
-    right: .5rem; }
+    height: 0;
+    bottom: 0;
+    right: 1.5rem; }
 
 cite {
   font-style: italic;
