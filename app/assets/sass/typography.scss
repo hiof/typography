@@ -28,9 +28,9 @@ Set 1rem to be 10px as a size-base.
 
 ```
 html {
-font-size: 62.5%;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;
+    font-size: 62.5%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 ```
 
@@ -38,9 +38,9 @@ font-size: 62.5%;
 */
 
 html {
-  font-size: 62.5%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+    font-size: 62.5%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 /*
@@ -49,8 +49,8 @@ html {
 
 */
 :focus{
-  outline: 3px solid $link-color;
-  outline: .3rem solid $link-color;
+    outline: 3px solid $link-color;
+    outline: .3rem solid $link-color;
 }
 
 /*
@@ -69,12 +69,12 @@ html {
 body,
 .body,
 #body {
-  font-size: $body-font-size;
-  line-height: $body-line-height;
-  font-family: $body-font-family;
-  //padding-top: 88px;
-  font-style: normal;
-  font-weight: 400;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    font-family: $body-font-family;
+    //padding-top: 88px;
+    font-style: normal;
+    font-weight: 400;
 }
 
 
@@ -92,16 +92,16 @@ h3,
 h4,
 h5,
 h6 {
-  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
-  -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  //color: $headingColour;
-  //font-family: $sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-family: $h-font-family;
+    -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
+    -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    //color: $headingColour;
+    //font-family: $sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-family: $h-font-family;
 }
 
 
@@ -112,10 +112,10 @@ h6 {
 */
 
 h1 {
-  //padding-top: 1rem;
-  line-height: 3rem;
-  //.fontsize-0(28);
-  font-size: 2.8rem;
+    //padding-top: 1rem;
+    line-height: 3rem;
+    //.fontsize-0(28);
+    font-size: 2.8rem;
 }
 
 
@@ -126,9 +126,9 @@ h1 {
 */
 
 h2 {
-  //padding-top: 1rem;
-  //.fontsize-0(22);
-  font-size: 2.2rem;
+    //padding-top: 1rem;
+    //.fontsize-0(22);
+    font-size: 2.2rem;
 }
 
 
@@ -139,9 +139,9 @@ h2 {
 */
 
 h3 {
-  //padding-top: 1rem;
-  //.fontsize-0(20);
-  font-size: 1.8rem;
+    //padding-top: 1rem;
+    //.fontsize-0(20);
+    font-size: 1.8rem;
 }
 
 
@@ -152,9 +152,9 @@ h3 {
 */
 
 h4 {
-  //padding-top: 1rem;
-  //.fontsize-0(18);
-  font-size: 1.6rem;
+    //padding-top: 1rem;
+    //.fontsize-0(18);
+    font-size: 1.6rem;
 }
 
 
@@ -165,9 +165,9 @@ h4 {
 */
 
 h5 {
-  //padding-top: 1rem;
-  //.fontsize-0(17);
-  font-size: 1.6rem;
+    //padding-top: 1rem;
+    //.fontsize-0(17);
+    font-size: 1.6rem;
 }
 
 
@@ -179,7 +179,7 @@ h5 {
 
 h6,
 .zeta {
-  //padding-top: 1rem;
+    //padding-top: 1rem;
 }
 
 
@@ -220,7 +220,7 @@ img + ul,
 img + blockquote p,
 img + pre,
 #sidebar header + * {
-  margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 
@@ -232,56 +232,56 @@ img + pre,
 
 ul,
 ol {
-  //margin-left: 2rem;
+    //margin-left: 2rem;
 }
 
 ul {
-  list-style: disc;
+    list-style: disc;
 }
 
 ol {
-  list-style: decimal;
+    list-style: decimal;
 }
 
 dt,
 dd {
-  display: inline-block;
-  float: left;
+    display: inline-block;
+    float: left;
 }
 
 dt {
-  clear: left;
-  margin-right: .5rem;
-  font-weight: bold;
-  &:after {
-    content: ": ";
-  }
+    clear: left;
+    margin-right: .5rem;
+    font-weight: bold;
+    &:after {
+        content: ": ";
+    }
 }
 
 // Lists.
 ul,
 ol {
-  margin-bottom: 2rem;
-  li {
-    -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
-    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    margin-left: 2.4rem;
-    //a {
-    //  //color: $hoverColour;
-    //  &:hover, &:active, &:focus {
-    //    color: $linkColour;
-    //  }
-    //}
-  }
+    margin-bottom: 2rem;
+    li {
+        -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
+        -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        margin-left: 2.4rem;
+        //a {
+        //  //color: $hoverColour;
+        //  &:hover, &:active, &:focus {
+        //    color: $linkColour;
+        //  }
+        //}
+    }
 }
 
 .dropdown-menu {
-  li {
-    margin-left: 0;
-  }
+    li {
+        margin-left: 0;
+    }
 }
 
 
@@ -292,19 +292,19 @@ ol {
 */
 
 a {
-  -webkit-transition: .1s color;
-  -moz-transition: .1s color;
-  -ms-transition: .1s color;
-  -o-transition: .1s color;
-  transition: .1s color;
-  color: $link-color;
-  text-decoration: none;
-  &:hover,
-  &:active,
-  &:focus {
-    color: $link-hover-color;
+    -webkit-transition: .1s color;
+    -moz-transition: .1s color;
+    -ms-transition: .1s color;
+    -o-transition: .1s color;
+    transition: .1s color;
+    color: $link-color;
     text-decoration: none;
-  }
+    &:hover,
+    &:active,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: none;
+    }
 }
 
 
@@ -316,14 +316,14 @@ Dotted underline on links within the content section
 
 #content,
 .content {
-  a:not(.btn) {
-    border-bottom: 1px dotted $link-color;
-    &:hover,
-    &:active,
-    &:focus {
-      border-bottom: 2px solid $link-color;
+    a:not(.btn) {
+        border-bottom: 1px dotted $link-color;
+        &:hover,
+        &:active,
+        &:focus {
+            border-bottom: 2px solid $link-color;
+        }
     }
-  }
 }
 
 
@@ -336,15 +336,15 @@ Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
 */
 
 p {
-  -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
-  -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  margin-bottom: 2rem;
-  &.intro {
-    font-size: 130%;
-  }
+    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
+    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    margin-bottom: 2rem;
+    &.intro {
+        font-size: 130%;
+    }
 }
 
 
@@ -356,15 +356,15 @@ p {
 */
 
 form {
-  margin-bottom: 2rem;
-  &.form-inline {
-    margin-bottom: 0;
-  }
+    margin-bottom: 2rem;
+    &.form-inline {
+        margin-bottom: 0;
+    }
 }
 
 // Remove padding-top from first heading
 section > .container >:first-child {
-  padding-top: 0;
+    padding-top: 0;
 }
 
 
@@ -427,6 +427,7 @@ cite{
   }
 }
 
+
 /*
 
 #### Horizontal rule.
@@ -434,12 +435,12 @@ cite{
 */
 
 hr {
-  color: darken($backgroundColour, 20%);
-  background-color: darken($backgroundColour, 20%);
-  border: 0;
-  border-bottom: 1px solid darken($backgroundColour, 20%);
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+    color: darken($backgroundColour, 20%);
+    background-color: darken($backgroundColour, 20%);
+    border: 0;
+    border-bottom: 1px solid darken($backgroundColour, 20%);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -447,31 +448,31 @@ hr {
 
 #### Code block. Some styles from normalize included.
 
-Some styles from normalize included.
+ Some styles from normalize included.
 
 */
 
 code,
 pre {
-  background-color: $codeBackgroundColour;
-  color: $white;
-  font-family: Menlo, Monaco, "Courier New", monospace;
+    background-color: $codeBackgroundColour;
+    color: $white;
+    font-family: Menlo, Monaco, "Courier New", monospace;
 }
 
 pre {
-  border-radius: 0.5rem;
-  display: block;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
-  margin-bottom: 2rem;
-  padding: 1rem;
+    border-radius: 0.5rem;
+    display: block;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 pre code {
-  //.fontsize-0(14);
-  font-size: 1.4rem;
+    //.fontsize-0(14);
+    font-size: 1.4rem;
 }
 
 
@@ -492,7 +493,7 @@ pre code {
 b,
 strong,
 .bold {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 
@@ -505,7 +506,7 @@ strong,
 em,
 i,
 .italic {
-  font-style: italic;
+    font-style: italic;
 }
 
 
@@ -517,9 +518,9 @@ i,
 
 small,
 .caption {
-  font-family: $body-font-family;
-  //.fontsize-0(12);
-  font-size: 1.2rem;
+    font-family: $body-font-family;
+    //.fontsize-0(12);
+    font-size: 1.2rem;
 }
 
 
@@ -530,10 +531,10 @@ small,
 */
 
 abbr {
-  border-bottom: 1px dotted black;
-  &:hover {
-    cursor: help;
-  }
+    border-bottom: 1px dotted black;
+    &:hover {
+        cursor: help;
+    }
 }
 
 
@@ -550,7 +551,7 @@ h2 + .caption,
 h3 + .caption,
 .gamma + .caption,
 img + .caption {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 
@@ -561,8 +562,8 @@ img + .caption {
 */
 
 .upper {
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 
@@ -573,9 +574,9 @@ img + .caption {
 */
 
 .admissionUpdateTime {
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-style: italic;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-style: italic;
 }
 
 
@@ -593,9 +594,9 @@ img + .caption {
 */
 
 @include mq($until: small) {
-  //#content {
-  //   font-size: 80%;
-  //}
+    //#content {
+    //   font-size: 80%;
+    //}
 }
 
 
@@ -606,16 +607,16 @@ img + .caption {
 */
 
 @include mq($from: small, $until: large) {
-  #content {
-    //font-size: 80%;
-    p,
-    ul,
-    ol {
-      //font-size: 120%;
-      max-width: 60rem;
-      line-height: 1.5em;
+    #content {
+        //font-size: 80%;
+        p,
+        ul,
+        ol {
+            //font-size: 120%;
+            max-width: 60rem;
+            line-height: 1.5em;
+        }
     }
-  }
 }
 
 
