@@ -11,6 +11,14 @@
 - frontend/standard/variables
 - Source Sans Pro font
 
+```css
+@import '../../../vendor/sass-mq/mq';
+@import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '../../../vendor/frontend/app/assets/sass/variables/_standard.scss';
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,600,300italic,400italic,600italic,700,700italic,900,900italic);
+```
+
+
 */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,600,300italic,400italic,600italic,700,700italic,900,900italic);
 /*
@@ -19,11 +27,11 @@
 
 Set 1rem to be 10px as a size-base.
 
-```
+```css
 html {
-    font-size: 62.5%;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 ```
 
@@ -38,6 +46,13 @@ html {
 
 ### Focus
 
+```css
+:focus{
+  outline: 3px solid $link-color;
+  outline: .3rem solid $link-color;
+}
+```
+
 */
 :focus {
   outline: 3px solid #337ab7;
@@ -45,12 +60,20 @@ html {
 
 /*
 
-### Content sections
-
-*/
-/*
-
 #### Body text size
+
+```css
+body,
+.body,
+#body {
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  font-family: $body-font-family;
+  //padding-top: 88px;
+  font-style: normal;
+  font-weight: 400;
+}
+```
 
 */
 body,
@@ -68,7 +91,7 @@ body,
 
 Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
 
-*/
+```css
 h1,
 h2,
 h3,
@@ -76,6 +99,25 @@ h4,
 h5,
 h6 {
   -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
+  -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  //color: $headingColour;
+  //font-family: $sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-family: $h-font-family;
+}
+```
+
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -87,53 +129,134 @@ h6 {
 
 ##### Heading level 1.
 
-*/
-h1 {
+<span class="h1">Heading level 1 looks like this</span>
+
+```css
+h1, .h1 {
   line-height: 3rem;
-  font-size: 2.8rem; }
+  font-size: 2.8rem;
+  font-weight: 300;
+}
+```
+
+
+*/
+h1, .h1 {
+  line-height: 3rem;
+  font-size: 2.8rem;
+  font-weight: 300; }
 
 /*
 
 ##### Heading level 2.
 
+
+<span class="h2">Heading level 2 looks like this</span>
+
+```css
+h2, .h2 {
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+```
 */
-h2 {
-  font-size: 2.2rem; }
+h2, .h2 {
+  font-size: 2.2rem;
+  font-weight: 300; }
 
 /*
 
 ##### Heading level 3.
 
+
+##### Example
+
+<span class="h3">Heading level 3 looks like this</span>
+```css
+h3, .h3 {
+  font-size: 1.8rem;
+}
+```
 */
-h3 {
+h3, .h3 {
   font-size: 1.8rem; }
 
 /*
 
 ##### Heading level 4.
 
+
+<span class="h4">Heading level 4 looks like this</span>
+```css
+h4, .h4 {
+  font-size: 1.6rem;
+}
+```
 */
-h4 {
+h4, .h4 {
   font-size: 1.6rem; }
 
 /*
 
 ##### Heading level 5.
 
+<span class="h5">Heading level 5 looks like this</span>
+```css
+h5, h6 {
+  font-size: 1.6rem;
+}
+```
 */
-h5 {
+h5, .h5 {
   font-size: 1.6rem; }
 
 /*
 
 ##### Heading level 6.
 
+<span class="h6>Heading level 6 looks like this</span>
+```css
+h6, .h6 {}
+```
 */
 /*
 
 ##### Heading combined with other content
 
 Nice spacing after high level headings and images. Text sits directly below h4, h5 and h6.
+
+```css
+h1 + p,
+h1 + ol,
+h1 + ul,
+h1 + dl,
+h1 + blockquote p,
+h1 + pre,
+.alpha + p,
+.alpha + ol,
+.alpha + ul,
+.alpha + blockquote p,
+.alpha + pre,
+h2 + p,
+h2 + ol,
+h2 + ul,
+h2 + dl,
+h2 + blockquote p,
+h2 + pre,
+.beta + p,
+.beta + ol,
+.beta + ul,
+.beta + blockquote p,
+.beta + pre,
+img + p,
+img + ol,
+img + ul,
+img + blockquote p,
+img + pre,
+#sidebar header + * {
+  margin-top: 2rem;
+}
+```
 
 */
 h1 + p,
@@ -163,7 +286,8 @@ img + ol,
 img + ul,
 img + blockquote p,
 img + pre,
-#sidebar header + * {
+#sidebar header + *,
+h2 + #freetext {
   margin-top: 2rem; }
 
 /*
@@ -195,7 +319,6 @@ ol {
   ul li,
   ol li {
     -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     margin-left: 2.4rem; }
@@ -238,7 +361,6 @@ Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
 
 */
 p {
-  -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
