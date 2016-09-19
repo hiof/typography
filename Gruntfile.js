@@ -34,10 +34,19 @@ module.exports = function(grunt) {
         //dest: 'tmp/css/prefixed/'
       }
     },
+    css_important: {
+      options: {
+        // Task-specific options go here.
+      },
+      your_target: {
+        'build/<%= pkg.name %>-important.css': ['build/<%= pkg.name %>.css']
+      },
+    },
     cssmin: {
       main: {
         options: {
-          banner: '/*! <%= pkg.name %> v<%= pkg.version %> by <%= pkg.author %>, released: <%= moment().format("HH:mm DD-MM-YYYY") %> */'
+          banner: '/*! <%= pkg.name %> v<%= pkg.version %> by <%= pkg.author %>, released: <%= moment().format("HH:mm DD-MM-YYYY") %> */',
+          keepSpecialComments: 1
         },
         expand: true,
         cwd: 'build',
@@ -143,7 +152,7 @@ module.exports = function(grunt) {
 });
 
 //grunt.registerTask('subtaskJs', ['jshint', 'concat:scripts', 'uglify']);
-grunt.registerTask('subtaskCss', ['sass', 'autoprefixer', 'cssmin']);
+grunt.registerTask('subtaskCss', ['sass', 'autoprefixer', 'cssmin', 'css_important']);
 
 
 grunt.registerTask('build', ['clean:build', 'clean:dist', 'subtaskCss', 'versioning:build']);
