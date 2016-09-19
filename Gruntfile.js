@@ -34,6 +34,14 @@ module.exports = function(grunt) {
         //dest: 'tmp/css/prefixed/'
       }
     },
+    css_important: {
+      options: {
+        // Task-specific options go here.
+      },
+      your_target: {
+        'build/<%= pkg.name %>-important.css': ['build/<%= pkg.name %>.css']
+      },
+    },
     cssmin: {
       main: {
         options: {
@@ -144,7 +152,7 @@ module.exports = function(grunt) {
 });
 
 //grunt.registerTask('subtaskJs', ['jshint', 'concat:scripts', 'uglify']);
-grunt.registerTask('subtaskCss', ['sass', 'autoprefixer', 'cssmin']);
+grunt.registerTask('subtaskCss', ['sass', 'autoprefixer', 'cssmin', 'css_important']);
 
 
 grunt.registerTask('build', ['clean:build', 'clean:dist', 'subtaskCss', 'versioning:build']);

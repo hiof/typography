@@ -286,7 +286,8 @@ img + ol,
 img + ul,
 img + blockquote p,
 img + pre,
-#sidebar header + * {
+#sidebar header + *,
+h2 + #freetext {
   margin-top: 2rem; }
 
 /*
