@@ -2,13 +2,14 @@
   "name": "typography",
   "homepage": "https://github.com/hiof/typography",
   "authors": [
-    "Kenneth Dahlstrøm <kenneth.dahlstrom@hiof.no>"
+    "Kenneth Lindbeck-Dahlstrøm <kld@hiof.no>"
   ],
   "description": "layout plugin",
-  "license": "GNU",
+  "license": "GPL-3.0",
   "dependencies": {
     "sass-mq": "~3.2.2",
     "bootstrap-sass": "~3.3.5",
-    "frontend": "https://github.com/hiof/frontend.git"
+    "frontend": "https://github.com/hiof/frontend.git",
+    "hiof-color": "https://github.com/hiof/colors.git"
   }
 }

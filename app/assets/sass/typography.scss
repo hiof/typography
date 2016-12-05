@@ -26,6 +26,31 @@
 @import '../../../vendor/sass-mq/mq';
 @import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
 @import '../../../vendor/frontend/app/assets/sass/variables/_standard.scss';
+@import '../../../vendor/hiof-color/app/assets/sass/_variables';
+
+
+
+
+
+
+
+
+// Typography
+$body-font-size: 1.8rem;
+$body-line-height: 1.8em;
+$body-font-family: 'Source Sans Pro', Arial, sans-serif;
+$text-color: #444;
+$h-font-family: $body-font-family;
+
+
+$h1-font-size: "";
+$h2-font-size: "";
+$h3-font-size: "";
+$h4-font-size: "";
+$h5-font-size: "";
+$h6-font-size: "";
+
+
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,600,300italic,400italic,600italic,700,700italic,900,900italic);
 
 /*
@@ -47,8 +72,9 @@ html {
 
 html {
   font-size: 62.5%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  //-ms-text-size-adjust: 100%;
+  //-webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /*
@@ -80,7 +106,6 @@ body,
   font-size: $body-font-size;
   line-height: $body-line-height;
   font-family: $body-font-family;
-  //padding-top: 88px;
   font-style: normal;
   font-weight: 400;
 }
@@ -94,7 +119,6 @@ body,
   font-size: $body-font-size;
   line-height: $body-line-height;
   font-family: $body-font-family;
-  //padding-top: 88px;
   font-style: normal;
   font-weight: 400;
 }
@@ -113,13 +137,7 @@ h3,
 h4,
 h5,
 h6 {
-  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
-  -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  //color: $headingColour;
-  //font-family: $sans-serif;
   font-style: normal;
   font-weight: 700;
   font-family: $h-font-family;
@@ -134,13 +152,7 @@ h3,
 h4,
 h5,
 h6 {
-  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
-  -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  //color: $headingColour;
-  //font-family: $sans-serif;
   font-style: normal;
   font-weight: 700;
   font-family: $h-font-family;
@@ -372,10 +384,6 @@ ul,
 ol {
     margin-bottom: 2rem;
     li {
-        -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
-        -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-        -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-        -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
         font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
         margin-left: 2.4rem;
         //a {
@@ -401,10 +409,6 @@ ol {
 */
 
 a {
-    -webkit-transition: .1s color;
-    -moz-transition: .1s color;
-    -ms-transition: .1s color;
-    -o-transition: .1s color;
     transition: .1s color;
     color: $link-color;
     text-decoration: none;
@@ -445,10 +449,6 @@ Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
 */
 
 p {
-    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
-    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     margin-bottom: 2rem;
     &.intro {
