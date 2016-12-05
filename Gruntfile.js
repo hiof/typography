@@ -8,8 +8,6 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     moment: require('moment'),
     // Tasks
-
-
     sass: {
       options: {
 
@@ -20,8 +18,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
-
     autoprefixer: {
       options: {
         browsers: ['last 2 versions', 'ie 9', 'ie 10', 'ie 11', 'edge 12', 'edge 13', 'edge 14']
@@ -56,7 +52,6 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-
       dist: {
         expand: true,
         cwd: 'build/',
@@ -147,8 +142,7 @@ module.exports = function(grunt) {
       }
     }
   }
-
-
+  
 });
 
 //grunt.registerTask('subtaskJs', ['jshint', 'concat:scripts', 'uglify']);
