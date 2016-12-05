@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 
     autoprefixer: {
       options: {
-        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+        browsers: ['last 2 versions', 'ie 9', 'ie 10', 'ie 11', 'edge 12', 'edge 13', 'edge 14']
         //diff: 'build/config/*.diff'
       },
       prefix: {
