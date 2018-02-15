@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       main: {
         options: {
           banner: '/*! <%= pkg.name %> v<%= pkg.version %> by <%= pkg.author %>, released: <%= moment().format("HH:mm DD-MM-YYYY") %> */',
-          keepSpecialComments: 1
+          specialComments: 1
         },
         expand: true,
         cwd: 'build',
@@ -142,7 +142,7 @@ module.exports = function(grunt) {
       }
     }
   }
-  
+
 });
 
 //grunt.registerTask('subtaskJs', ['jshint', 'concat:scripts', 'uglify']);
