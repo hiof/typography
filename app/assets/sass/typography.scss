@@ -13,7 +13,7 @@
 - frontend/standard/variables
 - Source Sans Pro font
 
-```css
+```
 @import '../../../vendor/sass-mq/mq';
 @import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
 @import '../../../vendor/frontend/app/assets/sass/variables/_standard.scss';
@@ -25,7 +25,10 @@
 
 @import '../../../vendor/sass-mq/mq';
 @import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
-@import '../../../vendor/frontend/app/assets/sass/variables/_standard.scss';
+@import "../../../vendor/frontend/app/assets/sass/variables/_border-radius";
+@import "../../../vendor/frontend/app/assets/sass/variables/_whitespace";
+@import "../../../vendor/frontend/app/assets/sass/variables/_divider";
+@import "../../../vendor/frontend/app/assets/sass/variables/_breakpoints";
 @import '../../../vendor/hiof-color/app/assets/sass/_variables';
 
 @import "_variables";
@@ -39,11 +42,12 @@
 
 Set 1rem to be 10px as a size-base.
 
-```css
+```
 html {
   font-size: 62.5%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 ```
 
@@ -52,8 +56,8 @@ html {
 
 html {
   font-size: 62.5%;
-  //-ms-text-size-adjust: 100%;
-  //-webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
@@ -61,7 +65,7 @@ html {
 
 ### Focus
 
-```css
+```
 :focus{
   outline: 3px solid $link-color;
   outline: .3rem solid $link-color;
@@ -79,7 +83,7 @@ html {
 
 #### Body text size
 
-```css
+```
 body,
 .body,
 #body {
@@ -110,7 +114,7 @@ body,
 
 Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
 
-```css
+```
 h1,
 h2,
 h3,
@@ -144,7 +148,7 @@ h6 {
 
 <span class="h1">Heading level 1 looks like this</span>
 
-```css
+```
 h1, .h1 {
   line-height: 3rem;
   font-size: 2.8rem;
@@ -169,7 +173,7 @@ h1, .h1 {
 
 <span class="h2">Heading level 2 looks like this</span>
 
-```css
+```
 h2, .h2 {
   font-size: 2.2rem;
   font-weight: 300;
@@ -191,7 +195,7 @@ h2, .h2 {
 ##### Example
 
 <span class="h3">Heading level 3 looks like this</span>
-```css
+```
 h3, .h3 {
   font-size: 1.8rem;
 }
@@ -209,7 +213,7 @@ h3, .h3 {
 
 
 <span class="h4">Heading level 4 looks like this</span>
-```css
+```
 h4, .h4 {
   font-size: 1.6rem;
 }
@@ -226,7 +230,7 @@ h4, .h4 {
 ##### Heading level 5.
 
 <span class="h5">Heading level 5 looks like this</span>
-```css
+```
 h5, h6 {
   font-size: 1.6rem;
 }
@@ -243,7 +247,7 @@ h5, .h5 {
 ##### Heading level 6.
 
 <span class="h6>Heading level 6 looks like this</span>
-```css
+```
 h6, .h6 {}
 ```
 */
@@ -257,7 +261,7 @@ h6, .h6 {}
 
 Nice spacing after high level headings and images. Text sits directly below h4, h5 and h6.
 
-```css
+```
 h1 + p,
 h1 + ol,
 h1 + ul,
@@ -534,10 +538,10 @@ cite{
 */
 
 hr {
-    color: darken($backgroundColour, 20%);
-    background-color: darken($backgroundColour, 20%);
+    color: darken($c-lightwarmgrey, 20%);
+    background-color: darken($c-lightwarmgrey, 20%);
     border: 0;
-    border-bottom: 1px solid darken($backgroundColour, 20%);
+    border-bottom: 1px solid darken($c-lightwarmgrey, 20%);
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
@@ -553,9 +557,7 @@ hr {
 
 code,
 pre {
-    background-color: $codeBackgroundColour;
-    color: $white;
-    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-family: Menlo, Monaco, "Courier New", monospace !important;
 }
 
 pre {
@@ -570,7 +572,6 @@ pre {
 }
 
 pre code {
-    //.fontsize-0(14);
     font-size: 1.4rem;
 }
 

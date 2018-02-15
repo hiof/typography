@@ -16,7 +16,7 @@ Install [Git](http://git-scm.com) if it's not already installed on your computer
 $ git clone https://github.com/hiof/typography.git
 ```
 
-Install [io.js](https://iojs.org) (or [Node.js](http://nodejs.org)) if it's not already installed on your computer. Then run (this will install the project dependencies):
+Install [Node.js](http://nodejs.org)) if it's not already installed on your computer. Then run (this will install the project dependencies):
 
 ```
 $ sudo npm install -g grunt-cli
